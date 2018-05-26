@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ 
+<section id="app">
+
+  <h1>Loop through array</h1>
+  <ul>
+    <!-- 
+      v-for (element, index) in collection 
+      add key for more efficient and reliable update
+    -->
+    <li v-for="(item, index) in ingredients" :key="item">{{ index + 1 }} - {{ item }}</li>
+  </ul>
+  <p>
+    <button @click="ingredients.push('spices')">Add new item</button>
+  </p>  
+    
+  <h1> Loop through object </h1>
+  <template v-for="(person, index) in persons">
+    <h3>Person {{ index + 1}} </h3>
+    <ul>
+      <!--loop through object -->
+      <li v-for="(val, key, index) in person">{{key}}: {{val}}</li>
+    </ul>
+  </template>
+
+  <h1>Loop numbers </h1>
+  <span v-for="n in 10">
+    <template v-if="n==1">{{n}}</template>
+    <template v-else>, {{n}}</template>
+  </span>
+  
+</section>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

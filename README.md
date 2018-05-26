@@ -20,10 +20,20 @@ For the basic examples you need webserver to view examples. If you do not have w
 
 ```
 
-## Sections - projects
+## Sections
 
 - helloWorld1: basic Vue.js
 - helloWorld2: helloWorl from function using component data
 - bindLink: v-bind directive example
 - bindOnce: bind variable only once (initial value)
 - innerHtml: innerHTML directive for loading html
+- assignment1: simple assigment
+- listenEvent: listen to button click events
+- 2wayBind: 2way binding using v-model
+- computedProps: use computed ad watch for properties based on other variables
+- cssClass: attach classes interactivelly, use {}, compute or pass as variable
+- conditionals: v-if en v-show
+- loops: v-for
+- monsterGame: first challenge assignment for using what we learned so far
+- instance: multiple vue instances and the way to initialize
+- lifecycle: lifecycle hooks

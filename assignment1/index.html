@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ 
+<section id="app">
+  <!-- 1 Fill p with your name and age -->
+  <p>
+    My name is {{name}}. I am {{age}}. 
+  </p>
+  <!-- 2 output age * 3 -->
+  <p>
+    My age times 3: {{ageTimes(3)}} 
+  </p>
+  <!-- 3 Random number -->
+  <p>
+    Random {{randomNum()}} 
+  </p>
+  <div>
+    <img :src="imgSrc" height="200px"/>
+  </div>
+
+</section>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

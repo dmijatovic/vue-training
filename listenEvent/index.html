@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ 
+<section id="app">
+  <h1>{{ count }}</h1>
+  <p>
+    <!--you ca directly execute js functions-->
+    <button v-on:click="count++">Increment by 1</button>
+    <!-- you can pass param into functions -->
+    <button v-on:click="increment(2)">Increment by 2</button>
+    <!-- you can pass event owner using reserver word $event -->
+    <button v-on:click="increment(3, $event)">Increment by 3</button>
+  </p>
+  <p v-on:mousemove="updateCoordinates">
+    Coordinates: {{x}} / {{y}}
+    <!-- vue modifiers, they can be chained --> 
+    <span v-on:mousemove.stop="">DEAD SPOT using event modifier</span>
+  </p>
+  <p>
+    <!-- vue key modifiers, chan be chained -->
+    <div>Shows alert when enter or tab kye pressed</div>
+    <input type="text" v-on:keyup.enter.tab="alertMe"/>
+  </p>
+</section>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

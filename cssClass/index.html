@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .box{
+      width:100px;
+      height: 100px;
+      background-color: grey;
+      margin: 24px;
+      border-radius: 50%;
+    }
+    .red{
+      background-color: red;
+    }
+    .green{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+ 
+<section id="app">
+
+  <!-- using property object in the format 
+      className: true/false condition,
+      className: true/false condition,
+  -->
+  <div class="box"
+    :class="{red:isRed, green: isGreen }"
+    @click="isRed = true">
+  </div>
+
+  <!-- using compute function that returns object-->
+  <div class="box"
+    :class="computeColor"
+    @click="isRed=false"></div>
+
+  <!--passing className using variable-->
+  <div class="box"
+    :class="className"
+    @click="isGreen=true"></div>
+
+  <label>What color to set on third box (red or green, grey is default)?</label>
+  <input v-model="className"/> 
+
+  <h2>Styles</h2>
+
+  <!--passing className using variable-->
+  <div class="box"
+    :style="applyStyle"></div>
+
+  <!-- you can combine -->
+  <div class="box"
+    :style="[applyStyle, { height: width + 'px' }]"></div>
+
+
+  <label>Apply color and width to 4th box</label>
+  <input v-model="color"/> 
+  <input v-model="width"/>
+
+</section>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

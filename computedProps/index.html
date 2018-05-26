@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ 
+<section id="app">
+
+  <h1>Count: {{ count }} |  {{ count2 }}</h1>
+  <span>First value reseived from method, second from computed</span>
+  <h1>Result count: {{ result() }} | {{ output }}</h1>
+  
+  <p>
+    <!--you can directly execute js functions-->
+    <button v-on:click="count++">Increase</button>
+    <button v-on:click="count--">Decrease</button>
+  </p>
+
+  <p>
+    <button v-on:click="count2++">Increase 2</button>
+  </p>
+</section>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

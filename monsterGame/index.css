@@ -1,0 +1,15 @@
+
+
+
+.game-board{
+  display: flex;
+  justify-content: space-around;
+}
+
+.health-value{
+  font-size: 2em;
+}
+
+.avatar > img{
+  height: 200px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MonsterGAME</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+ 
+<section id="app">
+  <h1>{{ title }}</h1>
+  <nav>
+    <template v-if="gameOn==false">
+      <button @click="gameOn=true">Start</button>
+    </template>
+
+    <template v-if="gameOn==true">
+      <button @click="attack(1)">Attack</button>
+      <button @click="attack(2)">SpecialAttack</button>
+      <button @click="heal">Heal</button>
+      <button @click="quit">Quit</button>
+    </template>
+  </nav>
+
+  <section class="game-board">
+    <div class="player">
+      <h2>{{player.name}}</h2>
+      <div class="avatar">
+        <img :src="player.img"/>
+      </div>
+      <div class="health">
+        <div class="health-value">{{player.health}}</div>
+      </div>
+    </div>
+    <div class="monster">
+        <h2>{{monster.name}}</h2>
+        <div class="avatar">
+          <img :src="monster.img"/>
+        </div>
+        <div class="health">
+          <div class="health-value">{{monster.health}}</div>
+        </div>
+    </div>
+  </section>
+</section>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

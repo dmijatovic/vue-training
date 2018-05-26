@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ 
+<section id="app">
+  <p v-if="show === 1">I am first element</p>
+  <p v-else-if="show==2">I am second element</p>
+  <p v-else-if="show==3">I am third element</p>
+  <p v-else>I am element to show on else (when show !1 - 3)</p>
+
+  <!--using html template tag (which is not rendered)-->
+  <template v-if="show==6">
+    <div>This shows block with more elements</div>
+    <div>While template element is not shown</div>
+    <div v-show="show==6">You can also use v-show, which hides element</div>
+  </template>
+
+  <div v-show="show==7">This element is hidden but rendered in html and shown on 7</div>
+  
+  <p>
+    Value: {{show}}
+
+    <button @click="show++">Increase</button>
+    <button @click="show--">Decrease</button>
+  
+  </p>
+  
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
