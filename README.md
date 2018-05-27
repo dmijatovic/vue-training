@@ -37,3 +37,13 @@ For the basic examples you need webserver to view examples. If you do not have w
 - monsterGame: first challenge assignment for using what we learned so far
 - instance: multiple vue instances and the way to initialize
 - lifecycle: lifecycle hooks
+- vue-cli: first project created with vue cli
+
+## Vue cli
+
+Project template types in cli
+
+- simple: index.html & vuejs CDN import
+- webpack-simple: basic webpack workflow without testing
+- webpack: complete webpack workflow incl. testing
+- browserify: two types using browserify
