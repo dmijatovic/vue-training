@@ -27,7 +27,7 @@ For the basic examples you need webserver to view examples. If you do not have w
 - bindLink: v-bind directive example
 - bindOnce: bind variable only once (initial value)
 - innerHtml: innerHTML directive for loading html
-- assignment1: simple assigment
+- assignments (1 - 8): simple assigments 
 - listenEvent: listen to button click events
 - 2wayBind: 2way binding using v-model
 - computedProps: use computed ad watch for properties based on other variables
@@ -38,6 +38,9 @@ For the basic examples you need webserver to view examples. If you do not have w
 - instance: multiple vue instances and the way to initialize
 - lifecycle: lifecycle hooks
 - vue-cli: first project created with vue cli
+- slots: passing html content from parent into a child component. Note: styling (if scoped) can be handled both (in child or parent). Data interpolation and other vue operations are handled in the parent only, because code is in the parent and ONLY injected into child. You can split injected content in multiple slots using names (see example).
+- dynamic components: using <component :is="componentName"> markup to indicate dynamical injection of an component. By default dynamic components are destroyed. To keep them alive wrap component in <keep-alive>. To know if component is active use additional lifecycle hooks: activated & deactivated.
+- wonderfulQuotes: second vue project about quotes
 
 ## Vue cli
 
